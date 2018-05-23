@@ -1,7 +1,7 @@
 # Plot3
 
-# Across the United States, how have emissions from coal combustion-related sources changed from 1999–2008?
-
+# How have emissions from motor vehicle sources changed from 1999–2008 in Baltimore City?
+  
 library(dplyr)
 library(ggplot2)
 
@@ -19,7 +19,7 @@ NEI.mv.24510 <- NEI.motor.vehicle %>%
 
 
 # Make a plot
-g <- ggplot(data=NEI.coal,aes(x=year,y=Emissions))
+g <- ggplot(data=NEI.mv.24510,aes(x=year,y=Emissions))
 
 g + geom_bar(stat="sum") +
   labs(title="Emmissions from Motor Vehicle Sources \nBaltimore City (1999-2008)",x="Year") +
