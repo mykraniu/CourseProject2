@@ -17,4 +17,5 @@ total.emissions <- sapply(years,yearly.emmissions,USE.NAMES=TRUE)
 
 barplot(total.emissions,main="Total Emissions from 1999 to 2008")
 
-
+dev.copy(png,"plot1.png")
+dev.off()
